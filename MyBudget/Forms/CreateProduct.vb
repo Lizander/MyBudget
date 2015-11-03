@@ -20,7 +20,7 @@
         ElseIf Me.ProductTableAdapter.DuplicateProduct(NameBox.Text) = 1 Then
             MessageBox.Show("A product with that name already exists.  Please use a different name.", "Product Creation", MessageBoxButtons.OK)
         Else
-            Me.ProductTableAdapter.CreateProduct(NameBox.Text, Decimal.Parse(PriceBox.Text), TypeBox.Text, CategoryBox.SelectedItem.ToString)
+            Me.ProductTableAdapter.CreateProduct(NameBox.Text, Decimal.Parse(PriceBox.Text), TypeBox.Text, CategoryBox.SelectedValue.ToString)
             If Me.ProductTableAdapter.GetData.Count > InitialCount Then
                 answer = MessageBox.Show("Product created.  Do you want to create another one?", "Product Creation", MessageBoxButtons.YesNo)
                 If answer = DialogResult.Yes Then
@@ -96,5 +96,14 @@
         Else
             e.KeyChar = ""
         End If
+    End Sub
+
+    Private Sub FillCategoryNamesToolStripButton_Click(sender As Object, e As EventArgs)
+        Try
+            Me.CategoryTableAdapter.FillCategoryNames(Me.ProductCreation.Category)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
     End Sub
 End Class
