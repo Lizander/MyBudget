@@ -90,17 +90,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CategoriesSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CreateCategory.Designer.vb">
+      <DependentUpon>CreateCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\CreateProduct.Designer.vb">
       <DependentUpon>CreateProduct.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\CreateProduct.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.vb">
+    <Compile Include="Forms\MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Forms\MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -137,18 +143,21 @@
     <Compile Include="DB\ProductCreation.vb">
       <DependentUpon>ProductCreation.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SearchFilter.Designer.vb">
+    <Compile Include="DB\SearchFilter.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchFilter.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\CreateCategory.resx">
+      <DependentUpon>CreateCategory.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateProduct.resx">
       <DependentUpon>CreateProduct.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -204,15 +213,15 @@
     <None Include="DB\ProductCreation.xss">
       <DependentUpon>ProductCreation.xsd</DependentUpon>
     </None>
-    <None Include="SearchFilter.xsc">
+    <None Include="DB\SearchFilter.xsc">
       <DependentUpon>SearchFilter.xsd</DependentUpon>
     </None>
-    <None Include="SearchFilter.xsd">
+    <None Include="DB\SearchFilter.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SearchFilter.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SearchFilter.xss">
+    <None Include="DB\SearchFilter.xss">
       <DependentUpon>SearchFilter.xsd</DependentUpon>
     </None>
   </ItemGroup>

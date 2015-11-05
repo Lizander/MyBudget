@@ -12,13 +12,13 @@
         Dim InitialCount As Int16
         InitialCount = Me.ProductTableAdapter.GetData.Count
         If RequiredName.Visible = True Then
-            MessageBox.Show("Please write a name for the product.", "Product Creation", MessageBoxButtons.OK)
+            MessageBox.Show("Please write a Name for the Product.", "Product Creation", MessageBoxButtons.OK)
             NameBox.Focus()
         ElseIf RequiredPrice.Visible = True Then
-            MessageBox.Show("Please write a price for the product.", "Product Creation", MessageBoxButtons.OK)
+            MessageBox.Show("Please write a Price for the Product.", "Product Creation", MessageBoxButtons.OK)
             PriceBox.Focus()
-        ElseIf Me.ProductTableAdapter.DuplicateProduct(NameBox.Text) = 1 Then
-            MessageBox.Show("A product with that name already exists.  Please use a different name.", "Product Creation", MessageBoxButtons.OK)
+        ElseIf Me.ProductTableAdapter.DuplicateProduct(NameBox.Text) > 0 Then
+            MessageBox.Show("A Product with that Name already exists.  Please use a different Name.", "Product Creation", MessageBoxButtons.OK)
         Else
             Me.ProductTableAdapter.CreateProduct(NameBox.Text, Decimal.Parse(PriceBox.Text), TypeBox.Text, CategoryBox.SelectedValue.ToString)
             If Me.ProductTableAdapter.GetData.Count > InitialCount Then

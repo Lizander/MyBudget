@@ -41,9 +41,9 @@ Partial Class CreateProduct
         Me.RequiredPrice = New System.Windows.Forms.Label()
         Me.TypeBox = New System.Windows.Forms.ComboBox()
         Me.CategoryBox = New System.Windows.Forms.ComboBox()
+        Me.CategoryBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.CategoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductCreation1 = New MyBudget.ProductCreation()
-        Me.CategoryBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         NameLabel = New System.Windows.Forms.Label()
         PriceLabel = New System.Windows.Forms.Label()
         TypeLabel1 = New System.Windows.Forms.Label()
@@ -51,9 +51,9 @@ Partial Class CreateProduct
         CType(Me.ProductCreation, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CategoriesSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CategoryBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CategoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductCreation1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CategoryBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NameLabel
@@ -211,6 +211,11 @@ Partial Class CreateProduct
         Me.CategoryBox.TabIndex = 41
         Me.CategoryBox.ValueMember = "Name"
         '
+        'CategoryBindingSource1
+        '
+        Me.CategoryBindingSource1.DataMember = "Category"
+        Me.CategoryBindingSource1.DataSource = Me.ProductCreation
+        '
         'CategoryBindingSource
         '
         Me.CategoryBindingSource.DataMember = "Category"
@@ -220,11 +225,6 @@ Partial Class CreateProduct
         '
         Me.ProductCreation1.DataSetName = "ProductCreation"
         Me.ProductCreation1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CategoryBindingSource1
-        '
-        Me.CategoryBindingSource1.DataMember = "Category"
-        Me.CategoryBindingSource1.DataSource = Me.ProductCreation
         '
         'CreateProduct
         '
@@ -247,13 +247,14 @@ Partial Class CreateProduct
         Me.Controls.Add(Me.cancelBtn)
         Me.Controls.Add(Me.saveBtn)
         Me.Name = "CreateProduct"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Create Product"
         CType(Me.ProductCreation, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CategoriesSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CategoryBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CategoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductCreation1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CategoryBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
