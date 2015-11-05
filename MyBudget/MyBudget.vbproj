@@ -137,6 +137,11 @@
     <Compile Include="DB\ProductCreation.vb">
       <DependentUpon>ProductCreation.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SearchFilter.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchFilter.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\CreateProduct.resx">
@@ -198,6 +203,17 @@
     </None>
     <None Include="DB\ProductCreation.xss">
       <DependentUpon>ProductCreation.xsd</DependentUpon>
+    </None>
+    <None Include="SearchFilter.xsc">
+      <DependentUpon>SearchFilter.xsd</DependentUpon>
+    </None>
+    <None Include="SearchFilter.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SearchFilter.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SearchFilter.xss">
+      <DependentUpon>SearchFilter.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

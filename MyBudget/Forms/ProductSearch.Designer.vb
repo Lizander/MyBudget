@@ -23,36 +23,34 @@ Partial Class ProductSearch
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.TypeBox = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.CategoryBox = New System.Windows.Forms.ListBox()
         Me.SearchDataView = New System.Windows.Forms.DataGridView()
+        Me.ProductBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MyBudgetDataSet = New MyBudget.myBudgetDataSet()
         Me.MyBudgetDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.TableAdapterManager = New MyBudget.myBudgetDataSetTableAdapters.TableAdapterManager()
         Me.ProductTableAdapter = New MyBudget.myBudgetDataSetTableAdapters.ProductTableAdapter()
-        Me.ProductBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TypeBox = New System.Windows.Forms.ComboBox()
+        Me.CategoryBox = New System.Windows.Forms.ComboBox()
+        Me.CategoriesSet = New MyBudget.CategoriesSet()
+        Me.CategoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CategoryTableAdapter = New MyBudget.CategoriesSetTableAdapters.CategoryTableAdapter()
         Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Clear = New System.Windows.Forms.Button()
         CType(Me.SearchDataView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MyBudgetDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MyBudgetDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CategoriesSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CategoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'TypeBox
-        '
-        Me.TypeBox.FormattingEnabled = True
-        Me.TypeBox.Location = New System.Drawing.Point(114, 12)
-        Me.TypeBox.Name = "TypeBox"
-        Me.TypeBox.Size = New System.Drawing.Size(120, 30)
-        Me.TypeBox.TabIndex = 0
         '
         'Label1
         '
@@ -72,14 +70,6 @@ Partial Class ProductSearch
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Categoria:"
         '
-        'CategoryBox
-        '
-        Me.CategoryBox.FormattingEnabled = True
-        Me.CategoryBox.Location = New System.Drawing.Point(362, 12)
-        Me.CategoryBox.Name = "CategoryBox"
-        Me.CategoryBox.Size = New System.Drawing.Size(120, 30)
-        Me.CategoryBox.TabIndex = 2
-        '
         'SearchDataView
         '
         Me.SearchDataView.AllowUserToAddRows = False
@@ -93,6 +83,11 @@ Partial Class ProductSearch
         Me.SearchDataView.ReadOnly = True
         Me.SearchDataView.Size = New System.Drawing.Size(443, 237)
         Me.SearchDataView.TabIndex = 4
+        '
+        'ProductBindingSource1
+        '
+        Me.ProductBindingSource1.DataMember = "Product"
+        Me.ProductBindingSource1.DataSource = Me.ProductBindingSource
         '
         'ProductBindingSource
         '
@@ -112,7 +107,7 @@ Partial Class ProductSearch
         'ExitButton
         '
         Me.ExitButton.BackColor = System.Drawing.Color.LightYellow
-        Me.ExitButton.Location = New System.Drawing.Point(39, 326)
+        Me.ExitButton.Location = New System.Drawing.Point(39, 388)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(443, 45)
         Me.ExitButton.TabIndex = 5
@@ -130,10 +125,39 @@ Partial Class ProductSearch
         '
         Me.ProductTableAdapter.ClearBeforeFill = True
         '
-        'ProductBindingSource1
+        'TypeBox
         '
-        Me.ProductBindingSource1.DataMember = "Product"
-        Me.ProductBindingSource1.DataSource = Me.ProductBindingSource
+        Me.TypeBox.FormattingEnabled = True
+        Me.TypeBox.Items.AddRange(New Object() {"Service", "Product"})
+        Me.TypeBox.Location = New System.Drawing.Point(73, 9)
+        Me.TypeBox.Name = "TypeBox"
+        Me.TypeBox.Size = New System.Drawing.Size(121, 21)
+        Me.TypeBox.TabIndex = 6
+        '
+        'CategoryBox
+        '
+        Me.CategoryBox.DataSource = Me.CategoryBindingSource
+        Me.CategoryBox.DisplayMember = "Name"
+        Me.CategoryBox.FormattingEnabled = True
+        Me.CategoryBox.Location = New System.Drawing.Point(345, 9)
+        Me.CategoryBox.Name = "CategoryBox"
+        Me.CategoryBox.Size = New System.Drawing.Size(121, 21)
+        Me.CategoryBox.TabIndex = 7
+        Me.CategoryBox.ValueMember = "Name"
+        '
+        'CategoriesSet
+        '
+        Me.CategoriesSet.DataSetName = "CategoriesSet"
+        Me.CategoriesSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CategoryBindingSource
+        '
+        Me.CategoryBindingSource.DataMember = "Category"
+        Me.CategoryBindingSource.DataSource = Me.CategoriesSet
+        '
+        'CategoryTableAdapter
+        '
+        Me.CategoryTableAdapter.ClearBeforeFill = True
         '
         'NameDataGridViewTextBoxColumn
         '
@@ -163,32 +187,43 @@ Partial Class ProductSearch
         Me.CategoryDataGridViewTextBoxColumn.Name = "CategoryDataGridViewTextBoxColumn"
         Me.CategoryDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'Clear
+        '
+        Me.Clear.BackColor = System.Drawing.Color.Gainsboro
+        Me.Clear.Location = New System.Drawing.Point(39, 325)
+        Me.Clear.Name = "Clear"
+        Me.Clear.Size = New System.Drawing.Size(443, 45)
+        Me.Clear.TabIndex = 8
+        Me.Clear.Text = "Clear Search"
+        Me.Clear.UseVisualStyleBackColor = False
+        '
         'ProductSearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(562, 418)
+        Me.ClientSize = New System.Drawing.Size(562, 453)
+        Me.Controls.Add(Me.Clear)
+        Me.Controls.Add(Me.CategoryBox)
+        Me.Controls.Add(Me.TypeBox)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.SearchDataView)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.CategoryBox)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TypeBox)
         Me.Name = "ProductSearch"
         Me.Text = "Search"
         CType(Me.SearchDataView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MyBudgetDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MyBudgetDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CategoriesSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CategoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TypeBox As System.Windows.Forms.ListBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents CategoryBox As System.Windows.Forms.ListBox
     Friend WithEvents SearchDataView As System.Windows.Forms.DataGridView
     Friend WithEvents MyBudgetDataSetBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents MyBudgetDataSet As MyBudget.myBudgetDataSet
@@ -197,8 +232,14 @@ Partial Class ProductSearch
     Friend WithEvents ProductTableAdapter As MyBudget.myBudgetDataSetTableAdapters.ProductTableAdapter
     Friend WithEvents ProductBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ProductBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents TypeBox As System.Windows.Forms.ComboBox
+    Friend WithEvents CategoryBox As System.Windows.Forms.ComboBox
+    Friend WithEvents CategoriesSet As MyBudget.CategoriesSet
+    Friend WithEvents CategoryBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents CategoryTableAdapter As MyBudget.CategoriesSetTableAdapters.CategoryTableAdapter
     Friend WithEvents NameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PriceDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TypeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents CategoryDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Clear As System.Windows.Forms.Button
 End Class
