@@ -13,26 +13,53 @@
     End Sub
 
     Private Sub TypeBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TypeBox.SelectedIndexChanged
-        If CategoryBox.SelectedItem Is Nothing Then
-            If TypeBox.SelectedItem IsNot Nothing Then
-                Me.SearchDataView.DataSource = Nothing
-                Me.ProductTableAdapter.FilterTypeFill(MyBudgetDataSet.Product, TypeBox.SelectedItem)
-                Me.SearchDataView.DataSource = Me.ProductBindingSource1
-                Me.SearchDataView.Refresh()
+        If TypeBox.SelectedItem IsNot Nothing Then
+            If CategoryBox.SelectedItem Is Nothing Then
+                SearchDataView.DataSource = Nothing
+                ProductTableAdapter.FilterTypeFill(MyBudgetDataSet.Product, TypeBox.SelectedItem)
+                SearchDataView.DataSource = Me.ProductBindingSource1
+                SearchDataView.Refresh()
+                SearchDataView.ClearSelection()
+            ElseIf CategoryBox.SelectedItem IsNot Nothing Then
+                SearchDataView.DataSource = Nothing
+                ProductTableAdapter.FilterBothFill(MyBudgetDataSet.Product, CategoryBox.SelectedValue, TypeBox.SelectedItem)
+                SearchDataView.DataSource = Me.ProductBindingSource1
+                SearchDataView.Refresh()
+                SearchDataView.ClearSelection()
             End If
         End If
     End Sub
 
     Private Sub ProductSearch_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         CategoryBox.SelectedValue = ""
+        SearchDataView.ClearSelection()
     End Sub
 
     Private Sub Clear_Click(sender As Object, e As EventArgs) Handles Clear.Click
         CategoryBox.SelectedItem = Nothing
         TypeBox.SelectedItem = Nothing
-        Me.SearchDataView.DataSource = Nothing
-        Me.ProductTableAdapter.Fill(MyBudgetDataSet.Product)
-        Me.SearchDataView.DataSource = Me.ProductBindingSource1
-        Me.SearchDataView.Refresh()
+        SearchDataView.DataSource = Nothing
+        ProductTableAdapter.Fill(MyBudgetDataSet.Product)
+        SearchDataView.DataSource = Me.ProductBindingSource1
+        SearchDataView.Refresh()
+        SearchDataView.ClearSelection()
+    End Sub
+
+    Private Sub CategoryBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CategoryBox.SelectedIndexChanged
+        If CategoryBox.SelectedItem IsNot Nothing Then
+            If TypeBox.SelectedItem Is Nothing Then
+                SearchDataView.DataSource = Nothing
+                ProductTableAdapter.FilterCategoryFill(MyBudgetDataSet.Product, CategoryBox.SelectedValue)
+                SearchDataView.DataSource = Me.ProductBindingSource1
+                SearchDataView.Refresh()
+                SearchDataView.ClearSelection()
+            ElseIf TypeBox.SelectedItem IsNot Nothing Then
+                SearchDataView.DataSource = Nothing
+                ProductTableAdapter.FilterBothFill(MyBudgetDataSet.Product, CategoryBox.SelectedValue, TypeBox.SelectedItem)
+                SearchDataView.DataSource = Me.ProductBindingSource1
+                SearchDataView.Refresh()
+                SearchDataView.ClearSelection()
+            End If
+        End If
     End Sub
 End Class
