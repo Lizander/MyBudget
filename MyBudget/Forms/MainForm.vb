@@ -15,7 +15,7 @@
     End Sub
 
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
-        Me.Close()
+        Application.Exit()
     End Sub
 
     Private Sub CreateCategoryButton_Click(sender As Object, e As EventArgs) Handles CreateCategoryButton.Click

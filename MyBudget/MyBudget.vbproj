@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -85,10 +85,21 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BudgetSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudgetSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DB\CategoriesSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CategoriesSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddToBudget.Designer.vb">
+      <DependentUpon>AddToBudget.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddToBudget.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CreateCategory.Designer.vb">
       <DependentUpon>CreateCategory.vb</DependentUpon>
@@ -148,8 +159,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchFilter.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TransactionCreation.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionCreation.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\AddToBudget.resx">
+      <DependentUpon>AddToBudget.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateCategory.resx">
       <DependentUpon>CreateCategory.vb</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +189,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="BudgetSet.xsc">
+      <DependentUpon>BudgetSet.xsd</DependentUpon>
+    </None>
+    <None Include="BudgetSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BudgetSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BudgetSet.xss">
+      <DependentUpon>BudgetSet.xsd</DependentUpon>
+    </None>
     <None Include="DB\CategoriesSet.xsc">
       <DependentUpon>CategoriesSet.xsd</DependentUpon>
     </None>
@@ -223,6 +253,17 @@
     </None>
     <None Include="DB\SearchFilter.xss">
       <DependentUpon>SearchFilter.xsd</DependentUpon>
+    </None>
+    <None Include="TransactionCreation.xsc">
+      <DependentUpon>TransactionCreation.xsd</DependentUpon>
+    </None>
+    <None Include="TransactionCreation.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransactionCreation.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TransactionCreation.xss">
+      <DependentUpon>TransactionCreation.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
