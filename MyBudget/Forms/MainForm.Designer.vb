@@ -22,72 +22,131 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.CreateProductButton = New System.Windows.Forms.Button()
         Me.ChooseProductButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.CreateCategoryButton = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'CreateProductButton
         '
-        Me.CreateProductButton.BackColor = System.Drawing.Color.CadetBlue
-        Me.CreateProductButton.Location = New System.Drawing.Point(129, 47)
+        Me.CreateProductButton.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.CreateProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CreateProductButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.CreateProductButton.Image = CType(resources.GetObject("CreateProductButton.Image"), System.Drawing.Image)
+        Me.CreateProductButton.Location = New System.Drawing.Point(169, 60)
         Me.CreateProductButton.Name = "CreateProductButton"
-        Me.CreateProductButton.Size = New System.Drawing.Size(154, 85)
+        Me.CreateProductButton.Size = New System.Drawing.Size(154, 156)
         Me.CreateProductButton.TabIndex = 0
-        Me.CreateProductButton.Text = "Create Product"
         Me.CreateProductButton.UseVisualStyleBackColor = False
         '
         'ChooseProductButton
         '
-        Me.ChooseProductButton.BackColor = System.Drawing.Color.PowderBlue
-        Me.ChooseProductButton.Location = New System.Drawing.Point(129, 251)
+        Me.ChooseProductButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ChooseProductButton.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ChooseProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ChooseProductButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ChooseProductButton.Image = CType(resources.GetObject("ChooseProductButton.Image"), System.Drawing.Image)
+        Me.ChooseProductButton.Location = New System.Drawing.Point(509, 71)
         Me.ChooseProductButton.Name = "ChooseProductButton"
-        Me.ChooseProductButton.Size = New System.Drawing.Size(154, 85)
+        Me.ChooseProductButton.Size = New System.Drawing.Size(154, 135)
         Me.ChooseProductButton.TabIndex = 1
-        Me.ChooseProductButton.Text = "Choose Product"
         Me.ChooseProductButton.UseVisualStyleBackColor = False
         '
         'ExitButton
         '
-        Me.ExitButton.BackColor = System.Drawing.Color.Khaki
-        Me.ExitButton.Location = New System.Drawing.Point(129, 357)
+        Me.ExitButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ExitButton.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExitButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ExitButton.Image = CType(resources.GetObject("ExitButton.Image"), System.Drawing.Image)
+        Me.ExitButton.Location = New System.Drawing.Point(1284, 492)
         Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(154, 85)
+        Me.ExitButton.Size = New System.Drawing.Size(136, 125)
         Me.ExitButton.TabIndex = 2
-        Me.ExitButton.Text = "Exit"
         Me.ExitButton.UseVisualStyleBackColor = False
         '
         'CreateCategoryButton
         '
-        Me.CreateCategoryButton.BackColor = System.Drawing.Color.SkyBlue
-        Me.CreateCategoryButton.Location = New System.Drawing.Point(129, 149)
+        Me.CreateCategoryButton.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.CreateCategoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CreateCategoryButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.CreateCategoryButton.Image = CType(resources.GetObject("CreateCategoryButton.Image"), System.Drawing.Image)
+        Me.CreateCategoryButton.Location = New System.Drawing.Point(169, 360)
         Me.CreateCategoryButton.Name = "CreateCategoryButton"
-        Me.CreateCategoryButton.Size = New System.Drawing.Size(154, 85)
+        Me.CreateCategoryButton.Size = New System.Drawing.Size(154, 143)
         Me.CreateCategoryButton.TabIndex = 3
-        Me.CreateCategoryButton.Text = "Create Category"
         Me.CreateCategoryButton.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(171, 219)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(152, 32)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "New Product"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(163, 506)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(166, 32)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "New Category"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(550, 219)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(86, 32)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Search"
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(423, 495)
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ClientSize = New System.Drawing.Size(1432, 629)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CreateCategoryButton)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.ChooseProductButton)
         Me.Controls.Add(Me.CreateProductButton)
+        Me.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Home"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents CreateProductButton As System.Windows.Forms.Button
     Friend WithEvents ChooseProductButton As System.Windows.Forms.Button
     Friend WithEvents ExitButton As System.Windows.Forms.Button
     Friend WithEvents CreateCategoryButton As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 
 End Class

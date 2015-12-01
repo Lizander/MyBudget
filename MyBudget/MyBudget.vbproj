@@ -13,7 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>D:\MyBudgetApp\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,9 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -60,6 +61,18 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>125C35F405295F9DC9879D61F23AC990BA4CEA01</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MyBudget_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -85,7 +98,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BudgetSet.Designer.vb">
+    <Compile Include="DB\BudgetSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BudgetSet.xsd</DependentUpon>
@@ -159,7 +172,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchFilter.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TransactionCreation.Designer.vb">
+    <Compile Include="DB\TransactionCreation.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TransactionCreation.xsd</DependentUpon>
@@ -189,15 +202,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BudgetSet.xsc">
+    <None Include="DB\BudgetSet.xsc">
       <DependentUpon>BudgetSet.xsd</DependentUpon>
     </None>
-    <None Include="BudgetSet.xsd">
+    <None Include="DB\BudgetSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>BudgetSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BudgetSet.xss">
+    <None Include="DB\BudgetSet.xss">
       <DependentUpon>BudgetSet.xsd</DependentUpon>
     </None>
     <None Include="DB\CategoriesSet.xsc">
@@ -254,17 +267,18 @@
     <None Include="DB\SearchFilter.xss">
       <DependentUpon>SearchFilter.xsd</DependentUpon>
     </None>
-    <None Include="TransactionCreation.xsc">
+    <None Include="DB\TransactionCreation.xsc">
       <DependentUpon>TransactionCreation.xsd</DependentUpon>
     </None>
-    <None Include="TransactionCreation.xsd">
+    <None Include="DB\TransactionCreation.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>TransactionCreation.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="TransactionCreation.xss">
+    <None Include="DB\TransactionCreation.xss">
       <DependentUpon>TransactionCreation.xsd</DependentUpon>
     </None>
+    <None Include="MyBudget_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB\myBudget.mdf">

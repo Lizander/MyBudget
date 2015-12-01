@@ -24,6 +24,7 @@ Partial Class CreateCategory
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim NameLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateCategory))
         Me.CategoriesSet = New MyBudget.CategoriesSet()
         Me.CategoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CategoryTableAdapter = New MyBudget.CategoriesSetTableAdapters.CategoryTableAdapter()
@@ -39,11 +40,15 @@ Partial Class CreateCategory
         '
         'NameLabel
         '
+        NameLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         NameLabel.AutoSize = True
-        NameLabel.ForeColor = System.Drawing.Color.DarkGreen
-        NameLabel.Location = New System.Drawing.Point(52, 52)
+        NameLabel.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        NameLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        NameLabel.Location = New System.Drawing.Point(584, 115)
         NameLabel.Name = "NameLabel"
-        NameLabel.Size = New System.Drawing.Size(38, 13)
+        NameLabel.Size = New System.Drawing.Size(84, 32)
         NameLabel.TabIndex = 1
         NameLabel.Text = "Name:"
         '
@@ -69,41 +74,54 @@ Partial Class CreateCategory
         '
         'NameTextBox
         '
-        Me.NameTextBox.Location = New System.Drawing.Point(96, 49)
+        Me.NameTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.NameTextBox.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NameTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.NameTextBox.Location = New System.Drawing.Point(684, 115)
         Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NameTextBox.Size = New System.Drawing.Size(100, 39)
         Me.NameTextBox.TabIndex = 2
         '
         'CancelButton
         '
-        Me.CancelButton.BackColor = System.Drawing.Color.Brown
+        Me.CancelButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CancelButton.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.CancelButton.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.CancelButton.Location = New System.Drawing.Point(152, 108)
+        Me.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CancelButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.CancelButton.Image = CType(resources.GetObject("CancelButton.Image"), System.Drawing.Image)
+        Me.CancelButton.Location = New System.Drawing.Point(729, 343)
         Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(75, 53)
+        Me.CancelButton.Size = New System.Drawing.Size(133, 132)
         Me.CancelButton.TabIndex = 13
-        Me.CancelButton.Text = "Cancel"
         Me.CancelButton.UseVisualStyleBackColor = False
         '
         'SaveButton
         '
-        Me.SaveButton.BackColor = System.Drawing.Color.Teal
-        Me.SaveButton.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.SaveButton.Location = New System.Drawing.Point(36, 108)
+        Me.SaveButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.SaveButton.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SaveButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.SaveButton.Image = CType(resources.GetObject("SaveButton.Image"), System.Drawing.Image)
+        Me.SaveButton.Location = New System.Drawing.Point(535, 343)
         Me.SaveButton.Name = "SaveButton"
-        Me.SaveButton.Size = New System.Drawing.Size(75, 53)
+        Me.SaveButton.Size = New System.Drawing.Size(133, 132)
         Me.SaveButton.TabIndex = 12
-        Me.SaveButton.Text = "Save"
         Me.SaveButton.UseVisualStyleBackColor = False
         '
         'RequiredName
         '
+        Me.RequiredName.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RequiredName.AutoSize = True
-        Me.RequiredName.ForeColor = System.Drawing.Color.DarkRed
-        Me.RequiredName.Location = New System.Drawing.Point(35, 52)
+        Me.RequiredName.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RequiredName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.RequiredName.Location = New System.Drawing.Point(567, 115)
         Me.RequiredName.Name = "RequiredName"
-        Me.RequiredName.Size = New System.Drawing.Size(11, 13)
+        Me.RequiredName.Size = New System.Drawing.Size(25, 32)
         Me.RequiredName.TabIndex = 32
         Me.RequiredName.Text = "*"
         '
@@ -111,16 +129,20 @@ Partial Class CreateCategory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(267, 195)
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ClientSize = New System.Drawing.Size(1481, 550)
         Me.ControlBox = False
         Me.Controls.Add(Me.RequiredName)
         Me.Controls.Add(Me.CancelButton)
         Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(NameLabel)
         Me.Controls.Add(Me.NameTextBox)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CreateCategory"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Create Category"
+        Me.Text = "New Category"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.CategoriesSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CategoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

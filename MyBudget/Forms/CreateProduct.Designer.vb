@@ -27,6 +27,7 @@ Partial Class CreateProduct
         Dim PriceLabel As System.Windows.Forms.Label
         Dim TypeLabel1 As System.Windows.Forms.Label
         Dim CategoryLabel1 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CreateProduct))
         Me.saveBtn = New System.Windows.Forms.Button()
         Me.cancelBtn = New System.Windows.Forms.Button()
         Me.ProductCreation = New MyBudget.ProductCreation()
@@ -58,65 +59,85 @@ Partial Class CreateProduct
         '
         'NameLabel
         '
+        NameLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         NameLabel.AutoSize = True
-        NameLabel.ForeColor = System.Drawing.Color.DarkGreen
-        NameLabel.Location = New System.Drawing.Point(94, 59)
+        NameLabel.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        NameLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        NameLabel.Location = New System.Drawing.Point(614, 58)
         NameLabel.Name = "NameLabel"
-        NameLabel.Size = New System.Drawing.Size(38, 13)
+        NameLabel.Size = New System.Drawing.Size(84, 32)
         NameLabel.TabIndex = 11
         NameLabel.Text = "Name:"
         '
         'PriceLabel
         '
+        PriceLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         PriceLabel.AutoSize = True
-        PriceLabel.ForeColor = System.Drawing.Color.DarkGreen
-        PriceLabel.Location = New System.Drawing.Point(94, 96)
+        PriceLabel.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        PriceLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        PriceLabel.Location = New System.Drawing.Point(614, 106)
         PriceLabel.Name = "PriceLabel"
-        PriceLabel.Size = New System.Drawing.Size(34, 13)
+        PriceLabel.Size = New System.Drawing.Size(71, 32)
         PriceLabel.TabIndex = 13
         PriceLabel.Text = "Price:"
         '
         'TypeLabel1
         '
+        TypeLabel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         TypeLabel1.AutoSize = True
-        TypeLabel1.ForeColor = System.Drawing.Color.DarkGreen
-        TypeLabel1.Location = New System.Drawing.Point(91, 140)
+        TypeLabel1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TypeLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        TypeLabel1.Location = New System.Drawing.Point(614, 164)
         TypeLabel1.Name = "TypeLabel1"
-        TypeLabel1.Size = New System.Drawing.Size(34, 13)
+        TypeLabel1.Size = New System.Drawing.Size(71, 32)
         TypeLabel1.TabIndex = 24
         TypeLabel1.Text = "Type:"
         '
         'CategoryLabel1
         '
+        CategoryLabel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         CategoryLabel1.AutoSize = True
-        CategoryLabel1.ForeColor = System.Drawing.Color.DarkGreen
-        CategoryLabel1.Location = New System.Drawing.Point(91, 182)
+        CategoryLabel1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        CategoryLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        CategoryLabel1.Location = New System.Drawing.Point(597, 227)
         CategoryLabel1.Name = "CategoryLabel1"
-        CategoryLabel1.Size = New System.Drawing.Size(52, 13)
+        CategoryLabel1.Size = New System.Drawing.Size(116, 32)
         CategoryLabel1.TabIndex = 25
         CategoryLabel1.Text = "Category:"
         '
         'saveBtn
         '
-        Me.saveBtn.BackColor = System.Drawing.Color.Teal
-        Me.saveBtn.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.saveBtn.Location = New System.Drawing.Point(81, 220)
+        Me.saveBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.saveBtn.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.saveBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.saveBtn.Image = CType(resources.GetObject("saveBtn.Image"), System.Drawing.Image)
+        Me.saveBtn.Location = New System.Drawing.Point(503, 331)
         Me.saveBtn.Name = "saveBtn"
-        Me.saveBtn.Size = New System.Drawing.Size(75, 53)
+        Me.saveBtn.Size = New System.Drawing.Size(147, 146)
         Me.saveBtn.TabIndex = 10
-        Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = False
         '
         'cancelBtn
         '
-        Me.cancelBtn.BackColor = System.Drawing.Color.Brown
+        Me.cancelBtn.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cancelBtn.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.cancelBtn.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.cancelBtn.Location = New System.Drawing.Point(197, 220)
+        Me.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cancelBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.cancelBtn.Image = CType(resources.GetObject("cancelBtn.Image"), System.Drawing.Image)
+        Me.cancelBtn.Location = New System.Drawing.Point(753, 331)
         Me.cancelBtn.Name = "cancelBtn"
-        Me.cancelBtn.Size = New System.Drawing.Size(75, 53)
+        Me.cancelBtn.Size = New System.Drawing.Size(147, 146)
         Me.cancelBtn.TabIndex = 11
-        Me.cancelBtn.Text = "Cancel"
         Me.cancelBtn.UseVisualStyleBackColor = False
         '
         'ProductCreation
@@ -151,63 +172,89 @@ Partial Class CreateProduct
         '
         'NameBox
         '
+        Me.NameBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.NameBox.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.NameBox.Location = New System.Drawing.Point(158, 59)
+        Me.NameBox.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NameBox.Location = New System.Drawing.Point(726, 61)
         Me.NameBox.Name = "NameBox"
-        Me.NameBox.Size = New System.Drawing.Size(100, 20)
+        Me.NameBox.Size = New System.Drawing.Size(100, 39)
         Me.NameBox.TabIndex = 26
         '
         'PriceBox
         '
+        Me.PriceBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PriceBox.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.PriceBox.Location = New System.Drawing.Point(158, 96)
+        Me.PriceBox.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PriceBox.Location = New System.Drawing.Point(726, 106)
         Me.PriceBox.Name = "PriceBox"
-        Me.PriceBox.Size = New System.Drawing.Size(100, 20)
+        Me.PriceBox.Size = New System.Drawing.Size(100, 39)
         Me.PriceBox.TabIndex = 27
         '
         'RequiredName
         '
+        Me.RequiredName.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RequiredName.AutoSize = True
+        Me.RequiredName.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RequiredName.ForeColor = System.Drawing.Color.DarkRed
-        Me.RequiredName.Location = New System.Drawing.Point(77, 62)
+        Me.RequiredName.Location = New System.Drawing.Point(597, 61)
         Me.RequiredName.Name = "RequiredName"
-        Me.RequiredName.Size = New System.Drawing.Size(11, 13)
+        Me.RequiredName.Size = New System.Drawing.Size(25, 32)
         Me.RequiredName.TabIndex = 31
         Me.RequiredName.Text = "*"
         '
         'RequiredPrice
         '
+        Me.RequiredPrice.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RequiredPrice.AutoSize = True
+        Me.RequiredPrice.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RequiredPrice.ForeColor = System.Drawing.Color.DarkRed
-        Me.RequiredPrice.Location = New System.Drawing.Point(77, 99)
+        Me.RequiredPrice.Location = New System.Drawing.Point(597, 109)
         Me.RequiredPrice.Name = "RequiredPrice"
-        Me.RequiredPrice.Size = New System.Drawing.Size(11, 13)
+        Me.RequiredPrice.Size = New System.Drawing.Size(25, 32)
         Me.RequiredPrice.TabIndex = 36
         Me.RequiredPrice.Text = "*"
         '
         'TypeBox
         '
-        Me.TypeBox.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TypeBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TypeBox.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.TypeBox.Cursor = System.Windows.Forms.Cursors.Default
         Me.TypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.TypeBox.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TypeBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.TypeBox.FormattingEnabled = True
         Me.TypeBox.Items.AddRange(New Object() {"Product", "Service"})
-        Me.TypeBox.Location = New System.Drawing.Point(158, 141)
+        Me.TypeBox.Location = New System.Drawing.Point(726, 164)
         Me.TypeBox.Name = "TypeBox"
-        Me.TypeBox.Size = New System.Drawing.Size(100, 21)
+        Me.TypeBox.Size = New System.Drawing.Size(100, 40)
         Me.TypeBox.Sorted = True
         Me.TypeBox.TabIndex = 40
         '
         'CategoryBox
         '
-        Me.CategoryBox.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.CategoryBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CategoryBox.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.CategoryBox.DataSource = Me.CategoryBindingSource1
         Me.CategoryBox.DisplayMember = "Name"
         Me.CategoryBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CategoryBox.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CategoryBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.CategoryBox.FormattingEnabled = True
-        Me.CategoryBox.Location = New System.Drawing.Point(158, 179)
+        Me.CategoryBox.Location = New System.Drawing.Point(726, 224)
         Me.CategoryBox.Name = "CategoryBox"
-        Me.CategoryBox.Size = New System.Drawing.Size(100, 21)
+        Me.CategoryBox.Size = New System.Drawing.Size(100, 40)
         Me.CategoryBox.TabIndex = 41
         Me.CategoryBox.ValueMember = "Name"
         '
@@ -230,9 +277,10 @@ Partial Class CreateProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.CancelButton = Me.cancelBtn
-        Me.ClientSize = New System.Drawing.Size(396, 338)
+        Me.ClientSize = New System.Drawing.Size(1472, 549)
         Me.ControlBox = False
         Me.Controls.Add(Me.CategoryBox)
         Me.Controls.Add(Me.TypeBox)
@@ -246,9 +294,11 @@ Partial Class CreateProduct
         Me.Controls.Add(PriceLabel)
         Me.Controls.Add(Me.cancelBtn)
         Me.Controls.Add(Me.saveBtn)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CreateProduct"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Create Product"
+        Me.Text = "New Product"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.ProductCreation, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CategoriesSet, System.ComponentModel.ISupportInitialize).EndInit()

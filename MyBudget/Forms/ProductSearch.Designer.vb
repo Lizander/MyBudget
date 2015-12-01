@@ -23,9 +23,12 @@ Partial Class ProductSearch
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProductSearch))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.SearchDataView = New System.Windows.Forms.DataGridView()
@@ -57,21 +60,27 @@ Partial Class ProductSearch
         '
         'Label1
         '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(488, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(31, 13)
+        Me.Label1.Size = New System.Drawing.Size(61, 30)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Tipo:"
+        Me.Label1.Text = "Type:"
         '
         'Label2
         '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(464, 126)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.Size = New System.Drawing.Size(101, 30)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Categoria:"
+        Me.Label2.Text = "Category:"
         '
         'SearchDataView
         '
@@ -79,21 +88,35 @@ Partial Class ProductSearch
         Me.SearchDataView.AllowUserToDeleteRows = False
         Me.SearchDataView.AllowUserToResizeColumns = False
         Me.SearchDataView.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        Me.SearchDataView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.SearchDataView.AutoGenerateColumns = False
-        Me.SearchDataView.BackgroundColor = System.Drawing.SystemColors.ControlLight
+        Me.SearchDataView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark
         Me.SearchDataView.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.SearchDataView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.SearchDataView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SearchDataView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.SearchDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SearchDataView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn, Me.CategoryDataGridViewTextBoxColumn})
         Me.SearchDataView.DataSource = Me.ProductBindingSource1
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLight
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDark
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.SearchDataView.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SearchDataView.DefaultCellStyle = DataGridViewCellStyle4
         Me.SearchDataView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.SearchDataView.EnableHeadersVisualStyles = False
         Me.SearchDataView.Location = New System.Drawing.Point(12, 12)
@@ -101,15 +124,19 @@ Partial Class ProductSearch
         Me.SearchDataView.Name = "SearchDataView"
         Me.SearchDataView.ReadOnly = True
         Me.SearchDataView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlLight
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SearchDataView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SearchDataView.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.SearchDataView.RowHeadersVisible = False
+        Me.SearchDataView.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchDataView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.SearchDataView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver
+        Me.SearchDataView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White
         Me.SearchDataView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.SearchDataView.Size = New System.Drawing.Size(401, 237)
         Me.SearchDataView.TabIndex = 4
@@ -124,9 +151,9 @@ Partial Class ProductSearch
         'PriceDataGridViewTextBoxColumn
         '
         Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "Price"
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.PriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Format = "C2"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.PriceDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
         Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
         Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
         Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
@@ -167,12 +194,15 @@ Partial Class ProductSearch
         '
         'ExitButton
         '
-        Me.ExitButton.BackColor = System.Drawing.Color.LightYellow
-        Me.ExitButton.Location = New System.Drawing.Point(12, 336)
+        Me.ExitButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ExitButton.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExitButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ExitButton.Image = CType(resources.GetObject("ExitButton.Image"), System.Drawing.Image)
+        Me.ExitButton.Location = New System.Drawing.Point(1324, 405)
         Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(401, 45)
+        Me.ExitButton.Size = New System.Drawing.Size(144, 136)
         Me.ExitButton.TabIndex = 5
-        Me.ExitButton.Text = "Back"
         Me.ExitButton.UseVisualStyleBackColor = False
         '
         'TableAdapterManager
@@ -188,23 +218,33 @@ Partial Class ProductSearch
         '
         'TypeBox
         '
+        Me.TypeBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TypeBox.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.TypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.TypeBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TypeBox.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TypeBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.TypeBox.FormattingEnabled = True
         Me.TypeBox.Items.AddRange(New Object() {"Service", "Product"})
-        Me.TypeBox.Location = New System.Drawing.Point(525, 66)
+        Me.TypeBox.Location = New System.Drawing.Point(604, 69)
         Me.TypeBox.Name = "TypeBox"
-        Me.TypeBox.Size = New System.Drawing.Size(121, 21)
+        Me.TypeBox.Size = New System.Drawing.Size(121, 38)
         Me.TypeBox.TabIndex = 6
         '
         'CategoryBox
         '
+        Me.CategoryBox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CategoryBox.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.CategoryBox.DataSource = Me.CategoryBindingSource
         Me.CategoryBox.DisplayMember = "Name"
         Me.CategoryBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CategoryBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CategoryBox.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CategoryBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.CategoryBox.FormattingEnabled = True
-        Me.CategoryBox.Location = New System.Drawing.Point(525, 123)
+        Me.CategoryBox.Location = New System.Drawing.Point(604, 126)
         Me.CategoryBox.Name = "CategoryBox"
-        Me.CategoryBox.Size = New System.Drawing.Size(121, 21)
+        Me.CategoryBox.Size = New System.Drawing.Size(121, 38)
         Me.CategoryBox.TabIndex = 7
         Me.CategoryBox.ValueMember = "Name"
         '
@@ -224,19 +264,24 @@ Partial Class ProductSearch
         '
         'Clear
         '
-        Me.Clear.BackColor = System.Drawing.Color.Gainsboro
-        Me.Clear.Location = New System.Drawing.Point(12, 273)
+        Me.Clear.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Clear.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Clear.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Clear.Image = CType(resources.GetObject("Clear.Image"), System.Drawing.Image)
+        Me.Clear.Location = New System.Drawing.Point(588, 182)
         Me.Clear.Name = "Clear"
-        Me.Clear.Size = New System.Drawing.Size(401, 45)
+        Me.Clear.Size = New System.Drawing.Size(152, 132)
         Me.Clear.TabIndex = 8
-        Me.Clear.Text = "Clear Search"
         Me.Clear.UseVisualStyleBackColor = False
         '
         'ProductSearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(665, 405)
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ClientSize = New System.Drawing.Size(1480, 553)
         Me.ControlBox = False
         Me.Controls.Add(Me.Clear)
         Me.Controls.Add(Me.CategoryBox)
@@ -245,9 +290,11 @@ Partial Class ProductSearch
         Me.Controls.Add(Me.SearchDataView)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ProductSearch"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Search"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.SearchDataView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
