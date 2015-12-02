@@ -40,9 +40,6 @@ Partial Class CreateCategory
         '
         'NameLabel
         '
-        NameLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         NameLabel.AutoSize = True
         NameLabel.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         NameLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -74,9 +71,6 @@ Partial Class CreateCategory
         '
         'NameTextBox
         '
-        Me.NameTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.NameTextBox.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NameTextBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.NameTextBox.Location = New System.Drawing.Point(684, 115)
@@ -92,7 +86,7 @@ Partial Class CreateCategory
         Me.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.CancelButton.Image = CType(resources.GetObject("CancelButton.Image"), System.Drawing.Image)
-        Me.CancelButton.Location = New System.Drawing.Point(729, 343)
+        Me.CancelButton.Location = New System.Drawing.Point(684, 343)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(133, 132)
         Me.CancelButton.TabIndex = 13
@@ -113,9 +107,6 @@ Partial Class CreateCategory
         '
         'RequiredName
         '
-        Me.RequiredName.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RequiredName.AutoSize = True
         Me.RequiredName.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RequiredName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -131,7 +122,7 @@ Partial Class CreateCategory
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1481, 550)
+        Me.ClientSize = New System.Drawing.Size(1362, 550)
         Me.ControlBox = False
         Me.Controls.Add(Me.RequiredName)
         Me.Controls.Add(Me.CancelButton)

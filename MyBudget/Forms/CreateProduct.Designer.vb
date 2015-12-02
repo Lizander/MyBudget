@@ -65,7 +65,7 @@ Partial Class CreateProduct
         NameLabel.AutoSize = True
         NameLabel.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         NameLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        NameLabel.Location = New System.Drawing.Point(614, 58)
+        NameLabel.Location = New System.Drawing.Point(528, 65)
         NameLabel.Name = "NameLabel"
         NameLabel.Size = New System.Drawing.Size(84, 32)
         NameLabel.TabIndex = 11
@@ -79,7 +79,7 @@ Partial Class CreateProduct
         PriceLabel.AutoSize = True
         PriceLabel.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         PriceLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        PriceLabel.Location = New System.Drawing.Point(614, 106)
+        PriceLabel.Location = New System.Drawing.Point(528, 113)
         PriceLabel.Name = "PriceLabel"
         PriceLabel.Size = New System.Drawing.Size(71, 32)
         PriceLabel.TabIndex = 13
@@ -93,7 +93,7 @@ Partial Class CreateProduct
         TypeLabel1.AutoSize = True
         TypeLabel1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         TypeLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        TypeLabel1.Location = New System.Drawing.Point(614, 164)
+        TypeLabel1.Location = New System.Drawing.Point(528, 171)
         TypeLabel1.Name = "TypeLabel1"
         TypeLabel1.Size = New System.Drawing.Size(71, 32)
         TypeLabel1.TabIndex = 24
@@ -107,7 +107,7 @@ Partial Class CreateProduct
         CategoryLabel1.AutoSize = True
         CategoryLabel1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         CategoryLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        CategoryLabel1.Location = New System.Drawing.Point(597, 227)
+        CategoryLabel1.Location = New System.Drawing.Point(511, 234)
         CategoryLabel1.Name = "CategoryLabel1"
         CategoryLabel1.Size = New System.Drawing.Size(116, 32)
         CategoryLabel1.TabIndex = 25
@@ -134,7 +134,7 @@ Partial Class CreateProduct
         Me.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cancelBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.cancelBtn.Image = CType(resources.GetObject("cancelBtn.Image"), System.Drawing.Image)
-        Me.cancelBtn.Location = New System.Drawing.Point(753, 331)
+        Me.cancelBtn.Location = New System.Drawing.Point(643, 331)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(147, 146)
         Me.cancelBtn.TabIndex = 11
@@ -177,9 +177,9 @@ Partial Class CreateProduct
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.NameBox.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.NameBox.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NameBox.Location = New System.Drawing.Point(726, 61)
+        Me.NameBox.Location = New System.Drawing.Point(630, 68)
         Me.NameBox.Name = "NameBox"
-        Me.NameBox.Size = New System.Drawing.Size(100, 39)
+        Me.NameBox.Size = New System.Drawing.Size(160, 39)
         Me.NameBox.TabIndex = 26
         '
         'PriceBox
@@ -189,9 +189,9 @@ Partial Class CreateProduct
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PriceBox.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.PriceBox.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PriceBox.Location = New System.Drawing.Point(726, 106)
+        Me.PriceBox.Location = New System.Drawing.Point(630, 113)
         Me.PriceBox.Name = "PriceBox"
-        Me.PriceBox.Size = New System.Drawing.Size(100, 39)
+        Me.PriceBox.Size = New System.Drawing.Size(160, 39)
         Me.PriceBox.TabIndex = 27
         '
         'RequiredName
@@ -202,7 +202,7 @@ Partial Class CreateProduct
         Me.RequiredName.AutoSize = True
         Me.RequiredName.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RequiredName.ForeColor = System.Drawing.Color.DarkRed
-        Me.RequiredName.Location = New System.Drawing.Point(597, 61)
+        Me.RequiredName.Location = New System.Drawing.Point(511, 68)
         Me.RequiredName.Name = "RequiredName"
         Me.RequiredName.Size = New System.Drawing.Size(25, 32)
         Me.RequiredName.TabIndex = 31
@@ -216,7 +216,7 @@ Partial Class CreateProduct
         Me.RequiredPrice.AutoSize = True
         Me.RequiredPrice.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RequiredPrice.ForeColor = System.Drawing.Color.DarkRed
-        Me.RequiredPrice.Location = New System.Drawing.Point(597, 109)
+        Me.RequiredPrice.Location = New System.Drawing.Point(511, 116)
         Me.RequiredPrice.Name = "RequiredPrice"
         Me.RequiredPrice.Size = New System.Drawing.Size(25, 32)
         Me.RequiredPrice.TabIndex = 36
@@ -234,9 +234,9 @@ Partial Class CreateProduct
         Me.TypeBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.TypeBox.FormattingEnabled = True
         Me.TypeBox.Items.AddRange(New Object() {"Product", "Service"})
-        Me.TypeBox.Location = New System.Drawing.Point(726, 164)
+        Me.TypeBox.Location = New System.Drawing.Point(630, 171)
         Me.TypeBox.Name = "TypeBox"
-        Me.TypeBox.Size = New System.Drawing.Size(100, 40)
+        Me.TypeBox.Size = New System.Drawing.Size(160, 40)
         Me.TypeBox.Sorted = True
         Me.TypeBox.TabIndex = 40
         '
@@ -252,9 +252,9 @@ Partial Class CreateProduct
         Me.CategoryBox.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CategoryBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.CategoryBox.FormattingEnabled = True
-        Me.CategoryBox.Location = New System.Drawing.Point(726, 224)
+        Me.CategoryBox.Location = New System.Drawing.Point(630, 231)
         Me.CategoryBox.Name = "CategoryBox"
-        Me.CategoryBox.Size = New System.Drawing.Size(100, 40)
+        Me.CategoryBox.Size = New System.Drawing.Size(160, 40)
         Me.CategoryBox.TabIndex = 41
         Me.CategoryBox.ValueMember = "Name"
         '
@@ -280,7 +280,7 @@ Partial Class CreateProduct
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.CancelButton = Me.cancelBtn
-        Me.ClientSize = New System.Drawing.Size(1472, 549)
+        Me.ClientSize = New System.Drawing.Size(1362, 549)
         Me.ControlBox = False
         Me.Controls.Add(Me.CategoryBox)
         Me.Controls.Add(Me.TypeBox)

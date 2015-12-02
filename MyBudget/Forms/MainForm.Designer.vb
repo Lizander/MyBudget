@@ -30,6 +30,8 @@ Partial Class MainForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'CreateProductButton
@@ -51,7 +53,7 @@ Partial Class MainForm
         Me.ChooseProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ChooseProductButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.ChooseProductButton.Image = CType(resources.GetObject("ChooseProductButton.Image"), System.Drawing.Image)
-        Me.ChooseProductButton.Location = New System.Drawing.Point(509, 71)
+        Me.ChooseProductButton.Location = New System.Drawing.Point(439, 71)
         Me.ChooseProductButton.Name = "ChooseProductButton"
         Me.ChooseProductButton.Size = New System.Drawing.Size(154, 135)
         Me.ChooseProductButton.TabIndex = 1
@@ -64,7 +66,7 @@ Partial Class MainForm
         Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExitButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.ExitButton.Image = CType(resources.GetObject("ExitButton.Image"), System.Drawing.Image)
-        Me.ExitButton.Location = New System.Drawing.Point(1284, 492)
+        Me.ExitButton.Location = New System.Drawing.Point(1214, 492)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(136, 125)
         Me.ExitButton.TabIndex = 2
@@ -110,11 +112,36 @@ Partial Class MainForm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(550, 219)
+        Me.Label3.Location = New System.Drawing.Point(480, 219)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 32)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Search"
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(480, 508)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(92, 32)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Budget"
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(439, 360)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(154, 135)
+        Me.Button1.TabIndex = 7
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'MainForm
         '
@@ -122,8 +149,10 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1432, 629)
+        Me.ClientSize = New System.Drawing.Size(1362, 629)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -148,5 +177,7 @@ Partial Class MainForm
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

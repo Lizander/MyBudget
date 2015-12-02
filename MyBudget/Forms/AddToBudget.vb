@@ -25,7 +25,20 @@
         If BudgetTableAdapter.SearchDate(DateBox.Value.ToShortDateString) = 0 Then
             BudgetTableAdapter.CreateBudget(DateBox.Value.ToShortDateString, 0.0, 0.0)
         End If
-        If TransactionTableAdapter.CreateTransaction(NameBox.Text, QuantityBox.Value, Double.Parse(PriceBox.Text.Trim("$")), DateBox.Value.ToShortDateString) > 0 Then
+        Dim Duplicate = TransactionTableAdapter.GetDuplicateItem(NameBox.Text, DateBox.Value.ToShortDateString)
+        If Duplicate.Count > 0 Then
+            If TransactionTableAdapter.UpdateDuplicate(Duplicate.Rows(0).Item(1) + QuantityBox.Value, NameBox.Text, DateBox.Value.ToShortDateString) > 0 Then
+                Dim Total = BudgetTableAdapter.GetTotal(DateBox.Value.ToShortDateString).Value
+                Total += (Double.Parse(PriceBox.Text.Trim("$")) * QuantityBox.Value)
+                Dim Tax = Total * 0.115
+                If BudgetTableAdapter.UpdateBudget(Total, Tax, DateBox.Value.ToShortDateString, DateBox.Value.ToShortDateString) > 0 Then
+                    MessageBox.Show("Item added to Budget!", "Budget Creation", MessageBoxButtons.OK)
+                    Me.Close()
+                Else
+                    MessageBox.Show("We're sorry, there's been an error.  Please try again.", "ERROR", MessageBoxButtons.OK)
+                End If
+            End If
+        ElseIf TransactionTableAdapter.CreateTransaction(NameBox.Text, QuantityBox.Value, Double.Parse(PriceBox.Text.Trim("$")), DateBox.Value.ToShortDateString) > 0 Then
             Dim Total = BudgetTableAdapter.GetTotal(DateBox.Value.ToShortDateString).Value
             Total += (Double.Parse(PriceBox.Text.Trim("$")) * QuantityBox.Value)
             Dim Tax = Total * 0.115

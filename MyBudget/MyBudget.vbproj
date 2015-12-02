@@ -98,6 +98,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BudgetTransaction.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudgetTransaction.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DB\BudgetSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,6 +136,12 @@
     </Compile>
     <Compile Include="Forms\MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SearchBudget.Designer.vb">
+      <DependentUpon>SearchBudget.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SearchBudget.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -191,6 +202,9 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchBudget.resx">
+      <DependentUpon>SearchBudget.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -202,6 +216,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="BudgetTransaction.xsc">
+      <DependentUpon>BudgetTransaction.xsd</DependentUpon>
+    </None>
+    <None Include="BudgetTransaction.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BudgetTransaction.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BudgetTransaction.xss">
+      <DependentUpon>BudgetTransaction.xsd</DependentUpon>
+    </None>
     <None Include="DB\BudgetSet.xsc">
       <DependentUpon>BudgetSet.xsd</DependentUpon>
     </None>

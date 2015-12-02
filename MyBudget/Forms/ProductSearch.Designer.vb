@@ -64,7 +64,7 @@ Partial Class ProductSearch
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(488, 69)
+        Me.Label1.Location = New System.Drawing.Point(524, 85)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(61, 30)
         Me.Label1.TabIndex = 1
@@ -76,7 +76,7 @@ Partial Class ProductSearch
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(464, 126)
+        Me.Label2.Location = New System.Drawing.Point(524, 142)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(101, 30)
         Me.Label2.TabIndex = 3
@@ -94,6 +94,8 @@ Partial Class ProductSearch
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
         Me.SearchDataView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.SearchDataView.AutoGenerateColumns = False
+        Me.SearchDataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.SearchDataView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.SearchDataView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark
         Me.SearchDataView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.SearchDataView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
@@ -147,6 +149,7 @@ Partial Class ProductSearch
         Me.NameDataGridViewTextBoxColumn.HeaderText = "Name"
         Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
         Me.NameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NameDataGridViewTextBoxColumn.Width = 93
         '
         'PriceDataGridViewTextBoxColumn
         '
@@ -157,6 +160,7 @@ Partial Class ProductSearch
         Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
         Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
         Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
+        Me.PriceDataGridViewTextBoxColumn.Width = 82
         '
         'TypeDataGridViewTextBoxColumn
         '
@@ -164,6 +168,7 @@ Partial Class ProductSearch
         Me.TypeDataGridViewTextBoxColumn.HeaderText = "Type"
         Me.TypeDataGridViewTextBoxColumn.Name = "TypeDataGridViewTextBoxColumn"
         Me.TypeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TypeDataGridViewTextBoxColumn.Width = 80
         '
         'CategoryDataGridViewTextBoxColumn
         '
@@ -171,6 +176,7 @@ Partial Class ProductSearch
         Me.CategoryDataGridViewTextBoxColumn.HeaderText = "Category"
         Me.CategoryDataGridViewTextBoxColumn.Name = "CategoryDataGridViewTextBoxColumn"
         Me.CategoryDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CategoryDataGridViewTextBoxColumn.Width = 120
         '
         'ProductBindingSource1
         '
@@ -199,7 +205,7 @@ Partial Class ProductSearch
         Me.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExitButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.ExitButton.Image = CType(resources.GetObject("ExitButton.Image"), System.Drawing.Image)
-        Me.ExitButton.Location = New System.Drawing.Point(1324, 405)
+        Me.ExitButton.Location = New System.Drawing.Point(1178, 307)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(144, 136)
         Me.ExitButton.TabIndex = 5
@@ -226,7 +232,7 @@ Partial Class ProductSearch
         Me.TypeBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.TypeBox.FormattingEnabled = True
         Me.TypeBox.Items.AddRange(New Object() {"Service", "Product"})
-        Me.TypeBox.Location = New System.Drawing.Point(604, 69)
+        Me.TypeBox.Location = New System.Drawing.Point(657, 82)
         Me.TypeBox.Name = "TypeBox"
         Me.TypeBox.Size = New System.Drawing.Size(121, 38)
         Me.TypeBox.TabIndex = 6
@@ -242,7 +248,7 @@ Partial Class ProductSearch
         Me.CategoryBox.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CategoryBox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.CategoryBox.FormattingEnabled = True
-        Me.CategoryBox.Location = New System.Drawing.Point(604, 126)
+        Me.CategoryBox.Location = New System.Drawing.Point(657, 139)
         Me.CategoryBox.Name = "CategoryBox"
         Me.CategoryBox.Size = New System.Drawing.Size(121, 38)
         Me.CategoryBox.TabIndex = 7
@@ -269,7 +275,7 @@ Partial Class ProductSearch
         Me.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Clear.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Clear.Image = CType(resources.GetObject("Clear.Image"), System.Drawing.Image)
-        Me.Clear.Location = New System.Drawing.Point(588, 182)
+        Me.Clear.Location = New System.Drawing.Point(641, 195)
         Me.Clear.Name = "Clear"
         Me.Clear.Size = New System.Drawing.Size(152, 132)
         Me.Clear.TabIndex = 8
@@ -281,7 +287,7 @@ Partial Class ProductSearch
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(1480, 553)
+        Me.ClientSize = New System.Drawing.Size(1354, 444)
         Me.ControlBox = False
         Me.Controls.Add(Me.Clear)
         Me.Controls.Add(Me.CategoryBox)
