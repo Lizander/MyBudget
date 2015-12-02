@@ -124,7 +124,7 @@ Partial Class MainForm
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(480, 508)
+        Me.Label4.Location = New System.Drawing.Point(474, 492)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(92, 32)
         Me.Label4.TabIndex = 8

@@ -29,7 +29,7 @@
         If Duplicate.Count > 0 Then
             If TransactionTableAdapter.UpdateDuplicate(Duplicate.Rows(0).Item(1) + QuantityBox.Value, NameBox.Text, DateBox.Value.ToShortDateString) > 0 Then
                 Dim Total = BudgetTableAdapter.GetTotal(DateBox.Value.ToShortDateString).Value
-                Total += (Double.Parse(PriceBox.Text.Trim("$")) * QuantityBox.Value)
+                Total += (Double.Parse(PriceBox.Text.Trim("$")) * (Duplicate.Rows(0).Item(1) + QuantityBox.Value))
                 Dim Tax = Total * 0.115
                 If BudgetTableAdapter.UpdateBudget(Total, Tax, DateBox.Value.ToShortDateString, DateBox.Value.ToShortDateString) > 0 Then
                     MessageBox.Show("Item added to Budget!", "Budget Creation", MessageBoxButtons.OK)

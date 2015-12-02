@@ -51,12 +51,16 @@ Partial Class SearchBudget
         Me.TaxLabel = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DateView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BudgetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BudgetTransaction, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemsView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransactionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BudgetTransactionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DateView
@@ -124,7 +128,7 @@ Partial Class SearchBudget
         Me.DateDataGridViewTextBoxColumn.HeaderText = "Date"
         Me.DateDataGridViewTextBoxColumn.Name = "DateDataGridViewTextBoxColumn"
         Me.DateDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DateDataGridViewTextBoxColumn.Width = 65
+        Me.DateDataGridViewTextBoxColumn.Width = 66
         '
         'BudgetBindingSource
         '
@@ -164,6 +168,7 @@ Partial Class SearchBudget
         Me.ItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.ItemsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ItemsView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
+        Me.ItemsView.ContextMenuStrip = Me.ContextMenuStrip1
         Me.ItemsView.DataSource = Me.TransactionBindingSource
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDarkDark
@@ -204,7 +209,7 @@ Partial Class SearchBudget
         Me.NameDataGridViewTextBoxColumn.HeaderText = "Name"
         Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
         Me.NameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NameDataGridViewTextBoxColumn.Width = 77
+        Me.NameDataGridViewTextBoxColumn.Width = 75
         '
         'QuantityDataGridViewTextBoxColumn
         '
@@ -212,7 +217,7 @@ Partial Class SearchBudget
         Me.QuantityDataGridViewTextBoxColumn.HeaderText = "Quantity"
         Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
         Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
-        Me.QuantityDataGridViewTextBoxColumn.Width = 95
+        Me.QuantityDataGridViewTextBoxColumn.Width = 93
         '
         'PriceDataGridViewTextBoxColumn
         '
@@ -220,7 +225,7 @@ Partial Class SearchBudget
         Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
         Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
         Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PriceDataGridViewTextBoxColumn.Width = 69
+        Me.PriceDataGridViewTextBoxColumn.Width = 67
         '
         'TransactionBindingSource
         '
@@ -261,7 +266,7 @@ Partial Class SearchBudget
         Me.TotalLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TotalLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TotalLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TotalLabel.Location = New System.Drawing.Point(560, 184)
+        Me.TotalLabel.Location = New System.Drawing.Point(635, 184)
         Me.TotalLabel.Name = "TotalLabel"
         Me.TotalLabel.Size = New System.Drawing.Size(56, 21)
         Me.TotalLabel.TabIndex = 7
@@ -275,7 +280,7 @@ Partial Class SearchBudget
         Me.TaxLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.TaxLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TaxLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TaxLabel.Location = New System.Drawing.Point(759, 184)
+        Me.TaxLabel.Location = New System.Drawing.Point(635, 233)
         Me.TaxLabel.Name = "TaxLabel"
         Me.TaxLabel.Size = New System.Drawing.Size(56, 21)
         Me.TaxLabel.TabIndex = 8
@@ -287,7 +292,7 @@ Partial Class SearchBudget
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(697, 184)
+        Me.Label1.Location = New System.Drawing.Point(559, 233)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(34, 21)
         Me.Label1.TabIndex = 9
@@ -299,11 +304,29 @@ Partial Class SearchBudget
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(509, 184)
+        Me.Label2.Location = New System.Drawing.Point(559, 184)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(45, 21)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Total:"
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 70)
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'SearchBudget
         '
@@ -332,6 +355,7 @@ Partial Class SearchBudget
         CType(Me.ItemsView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransactionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BudgetTransactionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -353,4 +377,7 @@ Partial Class SearchBudget
     Friend WithEvents TaxLabel As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents EditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

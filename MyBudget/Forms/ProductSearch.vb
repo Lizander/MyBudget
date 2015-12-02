@@ -68,4 +68,8 @@
         AddToBudget.PriceBox.Text = FormatCurrency(SearchDataView.Rows(e.RowIndex).Cells(1).Value.ToString())
         AddToBudget.Show()
     End Sub
+
+    Private Sub SearchDataView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles SearchDataView.CellContentClick
+
+    End Sub
 End Class
