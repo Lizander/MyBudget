@@ -98,7 +98,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BudgetTransaction.Designer.vb">
+    <Compile Include="DB\BudgetTransaction.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BudgetTransaction.xsd</DependentUpon>
@@ -129,6 +129,12 @@
       <DependentUpon>CreateProduct.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\CreateProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditBudgetItem.Designer.vb">
+      <DependentUpon>EditBudgetItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditBudgetItem.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\MainForm.vb">
@@ -199,6 +205,9 @@
     <EmbeddedResource Include="Forms\CreateProduct.resx">
       <DependentUpon>CreateProduct.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditBudgetItem.resx">
+      <DependentUpon>EditBudgetItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -216,15 +225,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BudgetTransaction.xsc">
+    <None Include="DB\BudgetTransaction.xsc">
       <DependentUpon>BudgetTransaction.xsd</DependentUpon>
     </None>
-    <None Include="BudgetTransaction.xsd">
+    <None Include="DB\BudgetTransaction.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>BudgetTransaction.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BudgetTransaction.xss">
+    <None Include="DB\BudgetTransaction.xss">
       <DependentUpon>BudgetTransaction.xsd</DependentUpon>
     </None>
     <None Include="DB\BudgetSet.xsc">
@@ -303,7 +312,7 @@
     <None Include="DB\TransactionCreation.xss">
       <DependentUpon>TransactionCreation.xsd</DependentUpon>
     </None>
-    <None Include="MyBudget_TemporaryKey.pfx" />
+    <None Include="Config\MyBudget_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB\myBudget.mdf">

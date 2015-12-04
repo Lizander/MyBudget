@@ -38,7 +38,7 @@
                     MessageBox.Show("We're sorry, there's been an error.  Please try again.", "ERROR", MessageBoxButtons.OK)
                 End If
             End If
-        ElseIf TransactionTableAdapter.CreateTransaction(NameBox.Text, QuantityBox.Value, Double.Parse(PriceBox.Text.Trim("$")), DateBox.Value.ToShortDateString) > 0 Then
+        ElseIf TransactionTableAdapter.CreateTransaction(NameBox.Text, QuantityBox.Value, (Double.Parse(PriceBox.Text.Trim("$")) * 1.0), DateBox.Value.ToShortDateString) > 0 Then
             Dim Total = BudgetTableAdapter.GetTotal(DateBox.Value.ToShortDateString).Value
             Total += (Double.Parse(PriceBox.Text.Trim("$")) * QuantityBox.Value)
             Dim Tax = Total * 0.115

@@ -28,20 +28,20 @@ Partial Class SearchBudget
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SearchBudget))
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SearchBudget))
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DateView = New System.Windows.Forms.DataGridView()
         Me.DateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BudgetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BudgetTransaction = New MyBudget.BudgetTransaction()
-        Me.ItemsView = New System.Windows.Forms.DataGridView()
-        Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransactionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BudgetTransactionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BudgetTableAdapter = New MyBudget.BudgetTransactionTableAdapters.BudgetTableAdapter()
@@ -51,16 +51,19 @@ Partial Class SearchBudget
         Me.TaxLabel = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ItemsView = New System.Windows.Forms.DataGridView()
+        Me.NameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TransactionBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.DateView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BudgetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BudgetTransaction, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ItemsView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.TransactionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BudgetTransactionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
+        CType(Me.ItemsView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransactionBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DateView
@@ -140,92 +143,23 @@ Partial Class SearchBudget
         Me.BudgetTransaction.DataSetName = "BudgetTransaction"
         Me.BudgetTransaction.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ItemsView
+        'ContextMenuStrip1
         '
-        Me.ItemsView.AllowUserToAddRows = False
-        Me.ItemsView.AllowUserToDeleteRows = False
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
-        Me.ItemsView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
-        Me.ItemsView.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ItemsView.AutoGenerateColumns = False
-        Me.ItemsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        Me.ItemsView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.ItemsView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ItemsView.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ItemsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.ItemsView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
-        Me.ItemsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ItemsView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
-        Me.ItemsView.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.ItemsView.DataSource = Me.TransactionBindingSource
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ItemsView.DefaultCellStyle = DataGridViewCellStyle8
-        Me.ItemsView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.ItemsView.EnableHeadersVisualStyles = False
-        Me.ItemsView.GridColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ItemsView.Location = New System.Drawing.Point(563, 12)
-        Me.ItemsView.Name = "ItemsView"
-        Me.ItemsView.ReadOnly = True
-        Me.ItemsView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ItemsView.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
-        Me.ItemsView.RowHeadersVisible = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Silver
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
-        Me.ItemsView.RowsDefaultCellStyle = DataGridViewCellStyle10
-        Me.ItemsView.Size = New System.Drawing.Size(304, 169)
-        Me.ItemsView.TabIndex = 1
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(108, 48)
         '
-        'NameDataGridViewTextBoxColumn
+        'EditToolStripMenuItem
         '
-        Me.NameDataGridViewTextBoxColumn.DataPropertyName = "Name"
-        Me.NameDataGridViewTextBoxColumn.HeaderText = "Name"
-        Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
-        Me.NameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NameDataGridViewTextBoxColumn.Width = 75
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.EditToolStripMenuItem.Text = "Edit"
         '
-        'QuantityDataGridViewTextBoxColumn
+        'DeleteToolStripMenuItem
         '
-        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "Quantity"
-        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
-        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
-        Me.QuantityDataGridViewTextBoxColumn.Width = 93
-        '
-        'PriceDataGridViewTextBoxColumn
-        '
-        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "Price"
-        Me.PriceDataGridViewTextBoxColumn.HeaderText = "Price"
-        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
-        Me.PriceDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PriceDataGridViewTextBoxColumn.Width = 67
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'TransactionBindingSource
         '
@@ -310,23 +244,111 @@ Partial Class SearchBudget
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Total:"
         '
-        'ContextMenuStrip1
+        'ItemsView
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 70)
+        Me.ItemsView.AllowUserToAddRows = False
+        Me.ItemsView.AllowUserToDeleteRows = False
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        Me.ItemsView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+        Me.ItemsView.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ItemsView.AutoGenerateColumns = False
+        Me.ItemsView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.ItemsView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.ItemsView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ItemsView.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ItemsView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.ItemsView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle7.Format = "C2"
+        DataGridViewCellStyle7.NullValue = Nothing
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.ItemsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ItemsView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.Price})
+        Me.ItemsView.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.ItemsView.DataSource = Me.TransactionBindingSource
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle9.Format = "C2"
+        DataGridViewCellStyle9.NullValue = Nothing
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ItemsView.DefaultCellStyle = DataGridViewCellStyle9
+        Me.ItemsView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.ItemsView.EnableHeadersVisualStyles = False
+        Me.ItemsView.GridColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ItemsView.Location = New System.Drawing.Point(563, 12)
+        Me.ItemsView.Name = "ItemsView"
+        Me.ItemsView.ReadOnly = True
+        Me.ItemsView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ItemsView.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
+        Me.ItemsView.RowHeadersVisible = False
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle11.Format = "C2"
+        DataGridViewCellStyle11.NullValue = Nothing
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White
+        Me.ItemsView.RowsDefaultCellStyle = DataGridViewCellStyle11
+        Me.ItemsView.Size = New System.Drawing.Size(304, 169)
+        Me.ItemsView.TabIndex = 1
         '
-        'EditToolStripMenuItem
+        'NameDataGridViewTextBoxColumn
         '
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.EditToolStripMenuItem.Text = "Edit"
+        Me.NameDataGridViewTextBoxColumn.DataPropertyName = "Name"
+        Me.NameDataGridViewTextBoxColumn.HeaderText = "Name"
+        Me.NameDataGridViewTextBoxColumn.Name = "NameDataGridViewTextBoxColumn"
+        Me.NameDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NameDataGridViewTextBoxColumn.Width = 75
         '
-        'DeleteToolStripMenuItem
+        'QuantityDataGridViewTextBoxColumn
         '
-        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DeleteToolStripMenuItem.Text = "Delete"
+        Me.QuantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.HeaderText = "Quantity"
+        Me.QuantityDataGridViewTextBoxColumn.Name = "QuantityDataGridViewTextBoxColumn"
+        Me.QuantityDataGridViewTextBoxColumn.ReadOnly = True
+        Me.QuantityDataGridViewTextBoxColumn.Width = 93
+        '
+        'Price
+        '
+        Me.Price.DataPropertyName = "Price"
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle8.Format = "C2"
+        DataGridViewCellStyle8.NullValue = Nothing
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Silver
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White
+        Me.Price.DefaultCellStyle = DataGridViewCellStyle8
+        Me.Price.HeaderText = "Price"
+        Me.Price.Name = "Price"
+        Me.Price.ReadOnly = True
+        Me.Price.Width = 67
+        '
+        'TransactionBindingSource1
+        '
+        Me.TransactionBindingSource1.DataMember = "Transaction"
+        Me.TransactionBindingSource1.DataSource = Me.BudgetTransactionBindingSource
         '
         'SearchBudget
         '
@@ -352,10 +374,11 @@ Partial Class SearchBudget
         CType(Me.DateView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BudgetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BudgetTransaction, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ItemsView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.TransactionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BudgetTransactionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
+        CType(Me.ItemsView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransactionBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -366,12 +389,8 @@ Partial Class SearchBudget
     Friend WithEvents BudgetBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents BudgetTableAdapter As MyBudget.BudgetTransactionTableAdapters.BudgetTableAdapter
     Friend WithEvents DateDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ItemsView As System.Windows.Forms.DataGridView
     Friend WithEvents TransactionBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents TransactionTableAdapter As MyBudget.BudgetTransactionTableAdapters.TransactionTableAdapter
-    Friend WithEvents NameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents QuantityDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents PriceDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ExitButton As System.Windows.Forms.Button
     Friend WithEvents TotalLabel As System.Windows.Forms.Label
     Friend WithEvents TaxLabel As System.Windows.Forms.Label
@@ -380,4 +399,9 @@ Partial Class SearchBudget
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents EditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ItemsView As System.Windows.Forms.DataGridView
+    Friend WithEvents NameDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents QuantityDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Price As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents TransactionBindingSource1 As System.Windows.Forms.BindingSource
 End Class

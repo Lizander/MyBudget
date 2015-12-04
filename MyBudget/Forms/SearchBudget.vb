@@ -24,6 +24,7 @@
     End Sub
 
     Private Sub SearchBudget_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        ItemsView.Columns(2).DefaultCellStyle.Format = "C2"
         If TotalLabel.Text.Length > 1 Then
             TotalLabel.Text = FormatCurrency(TotalLabel.Text)
             TaxLabel.Text = FormatCurrency(TaxLabel.Text)
@@ -31,7 +32,11 @@
     End Sub
 
     Private Sub EditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem.Click
-
+        EditBudgetItem.NameBox.Text = ItemsView.CurrentRow.Cells(0).Value.ToString()
+        EditBudgetItem.QuantityBox.Value = ItemsView.CurrentRow.Cells(1).Value
+        EditBudgetItem.PriceBox.Text = ItemsView.CurrentRow.Cells(2).Value.ToString()
+        EditBudgetItem.ItemDate = DateView.CurrentRow.Cells(0).Value.ToString()
+        EditBudgetItem.Show()
     End Sub
 
     Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
