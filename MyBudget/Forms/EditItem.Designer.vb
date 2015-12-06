@@ -248,8 +248,10 @@ Partial Class EditItem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.ClientSize = New System.Drawing.Size(486, 391)
+        Me.ControlBox = False
         Me.Controls.Add(Me.CategoryBox)
         Me.Controls.Add(Me.TypeBox)
         Me.Controls.Add(Me.RequiredPrice)
@@ -262,8 +264,10 @@ Partial Class EditItem
         Me.Controls.Add(PriceLabel)
         Me.Controls.Add(Me.cancelBtn)
         Me.Controls.Add(Me.saveBtn)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EditItem"
-        Me.Text = "EditItem"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Edit Item"
         CType(Me.CategoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MyBudgetDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

@@ -13,7 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\MyBudgetApp\</PublishUrl>
+    <PublishUrl>C:\Users\Kevin Lizander\MyBudget\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -119,6 +119,12 @@
     <Compile Include="Forms\AddToBudget.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\CategoryList.Designer.vb">
+      <DependentUpon>CategoryList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CategoryList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\CreateCategory.Designer.vb">
       <DependentUpon>CreateCategory.vb</DependentUpon>
     </Compile>
@@ -135,6 +141,12 @@
       <DependentUpon>EditBudgetItem.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\EditBudgetItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditCategory.Designer.vb">
+      <DependentUpon>EditCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditCategory.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\EditItem.Designer.vb">
@@ -205,6 +217,9 @@
     <EmbeddedResource Include="Forms\AddToBudget.resx">
       <DependentUpon>AddToBudget.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CategoryList.resx">
+      <DependentUpon>CategoryList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateCategory.resx">
       <DependentUpon>CreateCategory.vb</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditBudgetItem.resx">
       <DependentUpon>EditBudgetItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditCategory.resx">
+      <DependentUpon>EditCategory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditItem.resx">
       <DependentUpon>EditItem.vb</DependentUpon>

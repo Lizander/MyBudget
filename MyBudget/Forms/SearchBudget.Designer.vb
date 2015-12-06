@@ -39,7 +39,7 @@ Partial Class SearchBudget
         Me.DateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BudgetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BudgetTransaction = New MyBudget.BudgetTransaction()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.TransactionStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransactionBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -56,14 +56,17 @@ Partial Class SearchBudget
         Me.QuantityDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Price = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TransactionBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BudgetStrip = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.DeleteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DateView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BudgetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BudgetTransaction, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
+        Me.TransactionStrip.SuspendLayout()
         CType(Me.TransactionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BudgetTransactionBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ItemsView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransactionBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BudgetStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'DateView
@@ -92,6 +95,7 @@ Partial Class SearchBudget
         Me.DateView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DateView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DateView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DateDataGridViewTextBoxColumn})
+        Me.DateView.ContextMenuStrip = Me.BudgetStrip
         Me.DateView.DataSource = Me.BudgetBindingSource
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark
@@ -143,11 +147,11 @@ Partial Class SearchBudget
         Me.BudgetTransaction.DataSetName = "BudgetTransaction"
         Me.BudgetTransaction.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'ContextMenuStrip1
+        'TransactionStrip
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(108, 48)
+        Me.TransactionStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.TransactionStrip.Name = "ContextMenuStrip1"
+        Me.TransactionStrip.Size = New System.Drawing.Size(108, 48)
         '
         'EditToolStripMenuItem
         '
@@ -274,7 +278,7 @@ Partial Class SearchBudget
         Me.ItemsView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.ItemsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ItemsView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameDataGridViewTextBoxColumn, Me.QuantityDataGridViewTextBoxColumn, Me.Price})
-        Me.ItemsView.ContextMenuStrip = Me.ContextMenuStrip1
+        Me.ItemsView.ContextMenuStrip = Me.TransactionStrip
         Me.ItemsView.DataSource = Me.TransactionBindingSource
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDarkDark
@@ -350,6 +354,18 @@ Partial Class SearchBudget
         Me.TransactionBindingSource1.DataMember = "Transaction"
         Me.TransactionBindingSource1.DataSource = Me.BudgetTransactionBindingSource
         '
+        'BudgetStrip
+        '
+        Me.BudgetStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem1})
+        Me.BudgetStrip.Name = "BudgetStrip"
+        Me.BudgetStrip.Size = New System.Drawing.Size(153, 48)
+        '
+        'DeleteToolStripMenuItem1
+        '
+        Me.DeleteToolStripMenuItem1.Name = "DeleteToolStripMenuItem1"
+        Me.DeleteToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem1.Text = "Delete"
+        '
         'SearchBudget
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -374,11 +390,12 @@ Partial Class SearchBudget
         CType(Me.DateView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BudgetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BudgetTransaction, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.TransactionStrip.ResumeLayout(False)
         CType(Me.TransactionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BudgetTransactionBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ItemsView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransactionBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.BudgetStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -396,7 +413,7 @@ Partial Class SearchBudget
     Friend WithEvents TaxLabel As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents TransactionStrip As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents EditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ItemsView As System.Windows.Forms.DataGridView
@@ -404,4 +421,6 @@ Partial Class SearchBudget
     Friend WithEvents QuantityDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Price As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TransactionBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents BudgetStrip As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents DeleteToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

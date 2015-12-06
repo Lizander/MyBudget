@@ -27,4 +27,8 @@
         SearchBudget.Show()
         Me.Hide()
     End Sub
+
+    Private Sub CategoriesButton_Click(sender As Object, e As EventArgs) Handles CategoriesButton.Click
+        CategoryList.Show()
+    End Sub
 End Class

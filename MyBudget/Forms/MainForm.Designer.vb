@@ -32,6 +32,8 @@ Partial Class MainForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.CategoriesButton = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'CreateProductButton
@@ -143,6 +145,31 @@ Partial Class MainForm
         Me.Button1.TabIndex = 7
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'CategoriesButton
+        '
+        Me.CategoriesButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.CategoriesButton.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.CategoriesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CategoriesButton.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.CategoriesButton.Image = CType(resources.GetObject("CategoriesButton.Image"), System.Drawing.Image)
+        Me.CategoriesButton.Location = New System.Drawing.Point(719, 81)
+        Me.CategoriesButton.Name = "CategoriesButton"
+        Me.CategoriesButton.Size = New System.Drawing.Size(154, 135)
+        Me.CategoriesButton.TabIndex = 9
+        Me.CategoriesButton.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(751, 219)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(128, 32)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Categories"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -151,6 +178,8 @@ Partial Class MainForm
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.ClientSize = New System.Drawing.Size(1362, 629)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.CategoriesButton)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
@@ -179,5 +208,7 @@ Partial Class MainForm
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents CategoriesButton As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 
 End Class

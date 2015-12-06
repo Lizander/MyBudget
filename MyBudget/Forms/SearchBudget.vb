@@ -65,4 +65,25 @@
             End If
         End If
     End Sub
+
+    Private Sub DeleteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem1.Click
+        Dim BudgetDate = DateView.CurrentRow.Cells(0).Value()
+        Dim Answer = MessageBox.Show("Are you sure you want to delete the budget from " + BudgetDate + " forever?", "Budget Management", MessageBoxButtons.YesNo)
+        If Answer = Windows.Forms.DialogResult.Yes Then
+            If BudgetTableAdapter.DeleteBudget(BudgetDate) > 0 Then
+                DateView.DataSource = Nothing
+                BudgetTableAdapter.Fill(BudgetTransaction.Budget)
+                DateView.DataSource = BudgetBindingSource
+                DateView.Refresh()
+                ItemsView.DataSource = Nothing
+                TransactionTableAdapter.ShowItems(BudgetTransaction.Transaction, BudgetDate)
+                ItemsView.DataSource = TransactionBindingSource
+                ItemsView.Refresh()
+                ItemsView.ClearSelection()
+                TotalLabel.Text = ""
+                TaxLabel.Text = ""
+                MessageBox.Show("The budget has been deleted!", "Budget Management")
+            End If
+        End If
+    End Sub
 End Class
