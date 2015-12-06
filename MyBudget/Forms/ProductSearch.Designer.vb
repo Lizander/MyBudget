@@ -36,6 +36,10 @@ Partial Class ProductSearch
         Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CategoryDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ManageItems = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.AddToBudgetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MyBudgetDataSet = New MyBudget.myBudgetDataSet()
@@ -50,6 +54,7 @@ Partial Class ProductSearch
         Me.CategoryTableAdapter = New MyBudget.CategoriesSetTableAdapters.CategoryTableAdapter()
         Me.Clear = New System.Windows.Forms.Button()
         CType(Me.SearchDataView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ManageItems.SuspendLayout()
         CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MyBudgetDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,6 +115,7 @@ Partial Class ProductSearch
         Me.SearchDataView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.SearchDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SearchDataView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NameDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn, Me.CategoryDataGridViewTextBoxColumn})
+        Me.SearchDataView.ContextMenuStrip = Me.ManageItems
         Me.SearchDataView.DataSource = Me.ProductBindingSource1
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDarkDark
@@ -177,6 +183,30 @@ Partial Class ProductSearch
         Me.CategoryDataGridViewTextBoxColumn.Name = "CategoryDataGridViewTextBoxColumn"
         Me.CategoryDataGridViewTextBoxColumn.ReadOnly = True
         Me.CategoryDataGridViewTextBoxColumn.Width = 120
+        '
+        'ManageItems
+        '
+        Me.ManageItems.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToBudgetToolStripMenuItem, Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.ManageItems.Name = "ManageItems"
+        Me.ManageItems.Size = New System.Drawing.Size(153, 92)
+        '
+        'AddToBudgetToolStripMenuItem
+        '
+        Me.AddToBudgetToolStripMenuItem.Name = "AddToBudgetToolStripMenuItem"
+        Me.AddToBudgetToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddToBudgetToolStripMenuItem.Text = "Add to Budget"
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'DeleteToolStripMenuItem
+        '
+        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'ProductBindingSource1
         '
@@ -302,6 +332,7 @@ Partial Class ProductSearch
         Me.Text = "Search"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.SearchDataView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ManageItems.ResumeLayout(False)
         CType(Me.ProductBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MyBudgetDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -332,4 +363,8 @@ Partial Class ProductSearch
     Friend WithEvents PriceDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TypeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents CategoryDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ManageItems As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents AddToBudgetToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EditToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DeleteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

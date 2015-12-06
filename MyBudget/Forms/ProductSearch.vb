@@ -72,4 +72,38 @@
     Private Sub SearchDataView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles SearchDataView.CellContentClick
 
     End Sub
+
+    Private Sub AddToBudgetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToBudgetToolStripMenuItem.Click
+        AddToBudget.NameBox.Text = SearchDataView.CurrentRow.Cells(0).Value.ToString()
+        AddToBudget.PriceBox.Text = FormatCurrency(SearchDataView.CurrentRow.Cells(1).Value.ToString())
+        AddToBudget.Show()
+    End Sub
+
+    Private Sub EditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem.Click
+        EditItem.OriginalName = SearchDataView.CurrentRow.Cells(0).Value.ToString()
+        EditItem.OriginalPrice = FormatCurrency(SearchDataView.CurrentRow.Cells(1).Value.ToString())
+        EditItem.OriginalType = SearchDataView.CurrentRow.Cells(2).Value()
+        EditItem.OriginalCategory = SearchDataView.CurrentRow.Cells(3).Value()
+        EditItem.Show()
+    End Sub
+
+    Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
+        Dim ProductName = SearchDataView.CurrentRow.Cells(0).Value.ToString()
+        Dim ProductPrice = SearchDataView.CurrentRow.Cells(1).Value
+        Dim ProductType = SearchDataView.CurrentRow.Cells(2).Value.ToString()
+        Dim ProductCategory = SearchDataView.CurrentRow.Cells(3).Value.ToString()
+        Dim answer = MessageBox.Show("Are you sure you want to delete " + SearchDataView.CurrentRow.Cells(0).Value.ToString() + " forever?", "Product Management",
+                                     MessageBoxButtons.YesNo)
+        If answer = Windows.Forms.DialogResult.Yes Then
+            If ProductTableAdapter.DeleteProduct(ProductName, ProductPrice, ProductType, ProductCategory) > 0 Then
+                SearchDataView.DataSource = Nothing
+                ProductTableAdapter.Fill(MyBudgetDataSet.Product)
+                SearchDataView.DataSource = ProductBindingSource1
+                SearchDataView.Refresh()
+                MessageBox.Show("The product has been deleted!", "Product Management")
+            Else
+                MessageBox.Show("There has been an error please try again.")
+            End If
+        End If
+    End Sub
 End Class

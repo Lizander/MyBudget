@@ -137,6 +137,12 @@
     <Compile Include="Forms\EditBudgetItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\EditItem.Designer.vb">
+      <DependentUpon>EditItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditBudgetItem.resx">
       <DependentUpon>EditBudgetItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditItem.resx">
+      <DependentUpon>EditItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
